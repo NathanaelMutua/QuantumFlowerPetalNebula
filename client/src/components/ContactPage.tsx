@@ -1,26 +1,36 @@
-import { Card, CardContent } from './ui/card';
-import { Button } from './ui/button';
-import { Label } from './ui/label';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 
 export function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    
+
     // Create mailto link
-    const subject = encodeURIComponent('Contact Form Submission from ' + formData.get('name'));
-    const body = encodeURIComponent(
-      `Name: ${formData.get('name')}\n` +
-      `Email: ${formData.get('email')}\n` +
-      `Phone: ${formData.get('phone')}\n` +
-      `Subject: ${formData.get('subject')}\n\n` +
-      `Message:\n${formData.get('message')}`
+    const subject = encodeURIComponent(
+      "Contact Form Submission from " + formData.get("name")
     );
-    
+    const body = encodeURIComponent(
+      `Name: ${formData.get("name")}\n` +
+        `Email: ${formData.get("email")}\n` +
+        `Phone: ${formData.get("phone")}\n` +
+        `Subject: ${formData.get("subject")}\n\n` +
+        `Message:\n${formData.get("message")}`
+    );
+
     window.location.href = `mailto:highpointresort@gmail.com?subject=${subject}&body=${body}`;
   };
 
@@ -40,7 +50,7 @@ export function ContactPage() {
           {/* Contact Information */}
           <div className="lg:col-span-1">
             <h2 className="text-2xl mb-6">Contact Information</h2>
-            
+
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
@@ -49,8 +59,10 @@ export function ContactPage() {
                     <div>
                       <h3 className="mb-2">Address</h3>
                       <p className="text-gray-600">
-                        Olooloitikosh, Isinya<br />
-                        Kajiado County<br />
+                        Olooloitikosh, Isinya
+                        <br />
+                        Kajiado County
+                        <br />
                         Kenya
                       </p>
                     </div>
@@ -64,8 +76,8 @@ export function ContactPage() {
                     <Phone className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="mb-2">Phone</h3>
-                      <p className="text-gray-600">+254 700 000 000</p>
-                      <p className="text-gray-600">+254 711 000 000</p>
+                      <p className="text-gray-600">+254 702 807 946</p>
+                      <p className="text-gray-600">+254 702 807 946</p>
                     </div>
                   </div>
                 </CardContent>
@@ -90,8 +102,10 @@ export function ContactPage() {
                     <div>
                       <h3 className="mb-2">Operating Hours</h3>
                       <p className="text-gray-600">
-                        Open 24/7<br />
-                        Restaurant: 7AM - 10PM<br />
+                        Open 24/7
+                        <br />
+                        Restaurant: 7AM - 10PM
+                        <br />
                         Pool: 7AM - 8PM
                       </p>
                     </div>
@@ -216,7 +230,7 @@ export function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="h-96 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127643.02145866857!2d36.8219462!3d-1.3719264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sKajiado%20County%2C%20Kenya!5e0!3m2!1sen!2s!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2338484117245!2d36.89829670213022!3d-1.6147962004112904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182fbcf044a26193%3A0xd01a710883e4896c!2sHIGH%20POINT%20RESORT%20%26%20GARDENS!5e0!3m2!1sen!2ske!4v1760952205715!5m2!1sen!2ske"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -226,7 +240,8 @@ export function ContactPage() {
               ></iframe>
             </div>
             <p className="text-center text-gray-600 mt-4">
-              Located in the beautiful suburbs of Kitengela, easily accessible from Nairobi
+              Located in the beautiful suburbs of Kitengela, easily accessible
+              from Nairobi
             </p>
           </div>
         </div>
@@ -240,7 +255,10 @@ export function ContactPage() {
             <CardContent className="p-6 text-center">
               <h3 className="text-xl mb-2">Book a Room</h3>
               <p className="text-gray-600 mb-4">Reserve your accommodation</p>
-              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+              <Button
+                variant="outline"
+                className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+              >
                 View Rooms
               </Button>
             </CardContent>
@@ -250,7 +268,10 @@ export function ContactPage() {
             <CardContent className="p-6 text-center">
               <h3 className="text-xl mb-2">Restaurant Reservation</h3>
               <p className="text-gray-600 mb-4">Book your dining experience</p>
-              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+              <Button
+                variant="outline"
+                className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+              >
                 Reserve Table
               </Button>
             </CardContent>
@@ -260,7 +281,10 @@ export function ContactPage() {
             <CardContent className="p-6 text-center">
               <h3 className="text-xl mb-2">Events & Conferences</h3>
               <p className="text-gray-600 mb-4">Plan your special event</p>
-              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+              <Button
+                variant="outline"
+                className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+              >
                 Learn More
               </Button>
             </CardContent>

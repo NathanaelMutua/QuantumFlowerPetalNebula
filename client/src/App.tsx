@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Chatbot } from './components/Chatbot';
-import { HomePage } from './components/HomePage';
-import { AboutPage } from './components/AboutPage';
-import { RoomsPage } from './components/RoomsPage';
-import { RestaurantPage } from './components/RestaurantPage';
-import { FacilitiesPage } from './components/FacilitiesPage';
-import { ContactPage } from './components/ContactPage';
+import { useState, useEffect } from "react";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Chatbot } from "./components/Chatbot";
+import { HomePage } from "./components/HomePage";
+import { AboutPage } from "./components/AboutPage";
+import { RoomsPage } from "./components/RoomsPage";
+import { RestaurantPage } from "./components/RestaurantPage";
+import { FacilitiesPage } from "./components/FacilitiesPage";
+import { ContactPage } from "./components/ContactPage";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
 
   // Scroll to top when page changes
   useEffect(() => {
@@ -19,17 +19,17 @@ export default function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'home':
+      case "home":
         return <HomePage onNavigate={setCurrentPage} />;
-      case 'about':
+      case "about":
         return <AboutPage />;
-      case 'rooms':
+      case "rooms":
         return <RoomsPage />;
-      case 'restaurant':
+      case "restaurant":
         return <RestaurantPage />;
-      case 'facilities':
+      case "facilities":
         return <FacilitiesPage />;
-      case 'contact':
+      case "contact":
         return <ContactPage />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;

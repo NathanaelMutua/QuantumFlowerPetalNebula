@@ -1,4 +1,11 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 
 export function Footer() {
   return (
@@ -14,7 +21,8 @@ export function Footer() {
               <div>HighPoint Resort</div>
             </div>
             <p className="text-gray-400 text-sm">
-              Experience luxury and comfort in the heart of Kitengela. Your perfect getaway awaits.
+              Experience luxury and comfort in the heart of Kitengela. Your
+              perfect getaway awaits.
             </p>
           </div>
 
@@ -22,11 +30,31 @@ export function Footer() {
           <div>
             <h3 className="mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-red-600 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-red-600 transition-colors">Our Rooms</a></li>
-              <li><a href="#" className="hover:text-red-600 transition-colors">Restaurant</a></li>
-              <li><a href="#" className="hover:text-red-600 transition-colors">Facilities</a></li>
-              <li><a href="#" className="hover:text-red-600 transition-colors">Blog</a></li>
+              <li>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  Our Rooms
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  Restaurant
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  Facilities
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -36,11 +64,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-600" />
-                <span>Olooloitikosh, Isinya<br />Kajiado County, Kenya</span>
+                <span>
+                  Olooloitikosh, Isinya
+                  <br />
+                  Kajiado County, Kenya
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0 text-red-600" />
-                <span>+254 700 000 000</span>
+                <span>+254 702 807 946</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0 text-red-600" />
@@ -65,16 +97,28 @@ export function Footer() {
                 Subscribe
               </button>
             </div>
-            
+
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/p/Highpoint-Resort-and-Garden-100091671166573/"
+                className="text-gray-400 hover:text-red-600 transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
+              <a
+                target="_blank"
+                href="https://instagram.com"
+                className="text-gray-400 hover:text-red-600 transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
+              <a
+                target="_blank"
+                href="https://x.com"
+                className="text-gray-400 hover:text-red-600 transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
